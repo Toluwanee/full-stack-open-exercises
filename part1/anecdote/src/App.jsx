@@ -10,9 +10,6 @@ const Button = (props) => {
       <button onClick={props.handleVote}>
         vote
       </button>
-
-      
-
     </div>
   )
 }
@@ -52,18 +49,15 @@ const App = () => {
   function getRandomInt(max) {
     return Math.floor(Math.random() * max)
   }
-
     const handleNextAnecdote = () => {
     const updateAnecdote = getRandomInt(8)
     setSelected(updateAnecdote)
     console.log('current anecdote', updateAnecdote)
-
     
 }
-
-
   const anecdotesCopy = [...anecdotes]
   let zeroArrayCopy = [...zeroArray]
+
   const handleDisplayedVoteCount = () => {
     if(anecdotes[selected] === anecdotesCopy[selected]){   
       zeroArrayCopy[selected] += 1
